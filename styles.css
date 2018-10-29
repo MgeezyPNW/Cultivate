@@ -1,0 +1,28 @@
+* {
+    color: #072A24;
+}
+/* Container */
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 1px;
+    grid-template: repeat(2, 50px) / repeat(4, 1fr);
+}
+
+/* Header */
+header {
+    grid-column: 1 / -1;
+}
+
+/* Body */
+main {
+    grid-column: 1 / -1;
+}
+
+/* Footer */
+footer {
+    grid-column: 1 / -1;
+}
+
+
+
