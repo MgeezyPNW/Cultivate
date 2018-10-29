@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Cultivate</title>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+
+    <header>
+      <img src="#" alt=":ogo" title="Logo" />
+      <h1>Cultivate</h1>
+      <h2>"Food Equity of the Pacific Nortwest"</h2>
+    </header>
+
+    <main>
+      <!-- action is used to define the location where the forms collected data should be sent
+      method defines which HTTP method to send the data with ('get' or 'post') -->
+      <form action="#" method="#" id="survey">  
+        <fieldset>
+          <legend>Please fill out the form below:</legend>
+          
+          <label>What is your name?:</label>
+          <input type="text" id="name" name="user_name" />
+          
+          <!-- id to allow for multiple radio clicks -->
+          <fieldset id="garden-type">   
+            <legend>Choose your garden type:</legend>
+            <label>Sun</label>
+            <input type="radio" id="name" name="garden-type" />
+
+            <label>Shade</label>
+            <input type="radio" id="name" name="gardent-type" />
+
+            <label>Mixed</label>
+            <input type="radio" id="name" name="garden-type" />  
+          </fieldset>
+
+          <fieldset id="lunch">      
+              <legend>Choose your favorite lunch:</legend>
+              <label>Sandwich</label>
+              <input type="radio" id="name" name="lunch" />
+  
+              <label>Pasta</label>
+              <input type="radio" id="name" name="lunch" />
+  
+              <label>Salad</label>
+              <input type="radio" id="name" name="lunch" /> 
+              
+              <label>Soup</label>
+              <input type="radio" id="name" name="lunch" />  
+            </fieldset>
+
+            <fieldset id="experience">
+                <legend>Experience Level</legend>
+                <label>Beginner</label>
+                <input type="radio" id="name" name="experience" />
+    
+                <label>Intermediate</label>
+                <input type="radio" id="name" name="experience" />
+    
+                <label>Master</label>
+                <input type="radio" id="name" name="experience" />  
+            </fieldset>
+
+            <button type="submit" form="survey" value="Submit">Let's Get Growing!</button>
+      </form>
+    </main>
+
+    <footer>
+      
+    </footer>
+
+  </body>
+
+  <script src="app.js"></script>
+
+</html>
