@@ -1,10 +1,14 @@
 'use strict';
 
 // Global Variables 
-var allVegetables = [];
 var allPlants = [['Heirloom/Beefsteak Tomatoes', 'Sun', 'Big'], ['Cucumbers', 'Sun', 'Big'], ['Red Leaf Lettuce', 'Sun', 'Small'], ['Sweet Bell Peppers', 'Sun', 'Small'], ['Onions', 'Sun', 'Small'], ['Basil', 'Sun', 'Small'], ['Early Girl/Cherry Tomatoes', 'Mixed', 'Big'], ['Snow Peas', 'Mixed', 'Big'], ['Green Leaf Lettuce', 'Mixed', 'Small'], ['Italian Basil', 'Mixed', 'Small'], ['Celery', 'Mixed', 'Small'],['Banana Peppers', 'Mixed', 'Small'], ['Cherry Tomatoes', 'Shade', 'Big'],['Snow/Snap Peas', 'Shade', 'Big'], ['Beets', 'Shade', 'Small'], ['Parisian Carrots', 'Shade', 'Small'], ['Spring Mix Lettuce', 'Shade', 'Small'], ['Chives', 'Shade', 'Small']];
-
-
+var allVegetables = [];
+var bigSunPlants = [];
+var bigMixedPlants = [];
+var bigShadePlants = [];
+var smallSunPlants = [];
+var smallMixedPlants =[];
+var smallShadePlants = [];
 
 //Access DOM
 var largeContainer = document.getElementById('container_large');
@@ -23,6 +27,24 @@ function Vegetable(name, sunPreference, vegetableSize) {
   this.sunPreference = sunPreference;
   this.vegetableSize = vegetableSize;
   allVegetables.push(this);
+  if (this.vegetableSize === 'Big' && this.sunPreference === 'Sun') {
+    bigSunPlants.push(this);
+  } 
+  if (this.vegetableSize === 'Big' && this.sunPreference === 'Mixed') {
+    bigMixedPlants.push(this);
+  } 
+  if (this.vegetableSize === 'Big' && this.sunPreference === 'Shade') {
+    bigShadePlants.push(this);
+  }
+  if (this.vegetableSize === 'Small' && this.sunPreference === 'Sun') {
+    smallSunPlants.push(this);
+  }
+  if (this.vegetableSize === 'Small' && this.sunPreference === 'Mixed') {
+    smallMixedPlants.push(this);
+  }
+  if (this.vegetableSize === 'Small' && this.sunPreference === 'Shade') {
+    smallShadePlants.push(this);
+  }
 }
 
 for (var i = 0; i < allPlants.length; i++) {
