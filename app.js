@@ -1,6 +1,8 @@
 'use stirct';
 
 var userGarden = [];
+var survey = document.getElementById('survey');
+
 
 function Garden(name, gardenType, lunchPreference, experienceLevel){
   this.name = name;
@@ -11,15 +13,25 @@ function Garden(name, gardenType, lunchPreference, experienceLevel){
 }
 //example:  cunstructor working
 // new Garden('Ryan', 'sun', 'sandwich', 'beginner');
-
+function addToLocalStorage() {
+  var storedGarden = JSON.stringify(userGarden);
+  localStorage.setItem('garden', storedGarden);
+}
 //create instance:: working ahead
 //starting on eventlistener below
+survey.addEventListener('submit', letsGetGrowing);
 
-// function letsGetGrowing(event){
-// 	event.preventDefaults();
-// 	var name = event.target.name.value;
-// 	var gardenType = event.target.
-// }
+function letsGetGrowing(event){
+  //event.preventDefaults();
+  var name = event.target.user_name.value;
+  //console.log(name);  -worked
+  var gardenType = event.target.gardenSelection.value;
+  var lunchPreference = event.target.lunch.value;
+  var experienceLevel = event.target.experience.value;
+  //console.log(gardenType, lunchPreference, experienceLevel);   -worked
+  new Garden(name, gardenType, lunchPreference, experienceLevel);
+  addToLocalStorage();
+}
 
 // //cookie-stand examples:
 // function handleStoreSubmit(event) {
@@ -53,12 +65,12 @@ function Garden(name, gardenType, lunchPreference, experienceLevel){
 //when "get started" is clicked, begin survey --stretch
 //event listener -need to know when its clicked a link to href stretch
 
-//collect name 
+//collect name
 
 
 // collect garden type sun / shade / partial sun
 
-//ask preferred lunch.  
+//ask preferred lunch.
 //With your garden in mind, what would you prefer for lunch?
 
 // garden expereince level
