@@ -1,4 +1,4 @@
-'use stirct';
+'use strict';
 
 var userGarden = [];
 var survey = document.getElementById('survey');
@@ -22,7 +22,7 @@ function addToLocalStorage() {
 survey.addEventListener('submit', letsGetGrowing);
 
 function letsGetGrowing(event){
-  //event.preventDefaults();
+  event.preventDefault();
   var name = event.target.user_name.value;
   //console.log(name);  -worked
   var gardenType = event.target.gardenSelection.value;
