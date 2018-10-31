@@ -1,7 +1,7 @@
 'use strict';
 
 // Global Variables
-var allPlants = [['Heirloom/Beefsteak Tomatoes', 'Sun', 'Big'], ['Cucumbers', 'Sun', 'Big'], ['Red Leaf Lettuce', 'Sun', 'Small'], ['Sweet Bell Peppers', 'Sun', 'Small'], ['Onions', 'Sun', 'Small'], ['Basil', 'Sun', 'Small'], ['Early Girl/Cherry Tomatoes', 'Mixed', 'Big'], ['Snow Peas', 'Mixed', 'Big'], ['Green Leaf Lettuce', 'Mixed', 'Small'], ['Italian Basil', 'Mixed', 'Small'], ['Celery', 'Mixed', 'Small'],['Banana Peppers', 'Mixed', 'Small'], ['Cherry Tomatoes', 'Shade', 'Big'],['Snow/Snap Peas', 'Shade', 'Big'], ['Beets', 'Shade', 'Small'], ['Parisian Carrots', 'Shade', 'Small'], ['Spring Mix Lettuce', 'Shade', 'Small'], ['Chives', 'Shade', 'Small']];
+var allPlants = [['Heirloom/Beefsteak Tomatoes', 'Sun', 'Big', 'img/heirloom-tomato.png'], ['Cucumbers', 'Sun', 'Big', 'img/cucumber.png'], ['Red Leaf Lettuce', 'Sun', 'Small', 'img/red-lettuce.png'], ['Sweet Bell Peppers', 'Sun', 'Small', 'img/sweet-bell-pepper.png'], ['Onions', 'Sun', 'Small', 'img/onion.png'], ['Basil', 'Sun', 'Small', 'img/thai-basil.png'], ['Early Girl/Cherry Tomatoes', 'Mixed', 'Big', 'img/early-girl-tomato.png'], ['Snow Peas', 'Mixed', 'Big', 'img/snow-peas.png'], ['Green Leaf Lettuce', 'Mixed', 'Small', 'img/green-lettuce.png'], ['Italian Basil', 'Mixed', 'Small', 'img/italian-basil.png'], ['Celery', 'Mixed', 'Small', 'img/celery.png'],['Banana Peppers', 'Mixed', 'Small', 'img/banana-pepper.png'], ['Cherry Tomatoes', 'Shade', 'Big', 'img/cherry-tomato.png'],['Snap/Snow Peas', 'Shade', 'Big', 'img/snap-pea.png'], ['Beets', 'Shade', 'Small', 'img/beets.png'], ['Parisian Carrots', 'Shade', 'Small', 'img/carrot.png'], ['Spring Mix Lettuce', 'Shade', 'Small', 'img/spring-mix-lettuce.png'], ['Chives', 'Shade', 'Small', 'img/chives.png']];
 var allVegetables = [];
 var bigSunPlants = [];
 var bigMixedPlants = [];
@@ -9,6 +9,7 @@ var bigShadePlants = [];
 var smallSunPlants = [];
 var smallMixedPlants =[];
 var smallShadePlants = [];
+var retrievedGarden = [];
 
 //Access DOM
 // var largeContainer = document.getElementById('container_large');
@@ -23,17 +24,25 @@ var tableList = document.getElementById('list');
 
 function checkLocalStorage() {
   //create instances
-  var retrievedGarden = JSON.parse(localStorage.getItem('garden'));
-  // console.log('retrievedGarden', retrievedGarden);
+  retrievedGarden = JSON.parse(localStorage.getItem('garden'));
+
+  // garden.push(retrievedGarden);
+  // console.log('garden',garden);
+  // return retrievedGarden;
+  console.log('retrievedGarden', retrievedGarden);
+  // garden = retrievedGarden;
   // retrievedGarden.forEach(function(gardenItem){
-  var veggie = new Vegetable(retrievedGarden[0].name, retrievedGarden[0].gardenType, retrievedGarden[0].vegetableSize);
-  return veggie;
+
+  // var garden = new Vegetable(retrievedGarden[0].name, retrievedGarden[0].gardenType, retrievedGarden[0].vegetableSize);
+  // return garden;
+
   // })
 }
 
-function showGarden(vegetable) {
-  console.log(vegetable);
-  if (vegetable.sunPreference === 'Sun') {
+
+function showGarden() {
+  // console.log(vegetable);
+  if (retrievedGarden[0].gardenType === 'sun') {
     back_left.src = bigSunPlants[0].filepath;
     back_right.src = bigSunPlants[1].filepath;
     front_left.src = smallSunPlants[0].filepath;
@@ -41,7 +50,7 @@ function showGarden(vegetable) {
     front_right_center.src = smallSunPlants[2].filepath;
     front_right.src = smallSunPlants[3].filepath;
   }
-  if (vegetable.sunPreference === 'mixed') {
+  if (retrievedGarden[0].gardenType === 'mixed') {
     back_left.src = bigMixedPlants[0].filepath;
     back_right.src = bigMixedPlants[1].filepath;
     front_left.src = smallMixedPlants[0].filepath;
@@ -49,7 +58,7 @@ function showGarden(vegetable) {
     front_right_center.src = smallMixedPlants[2].filepath;
     front_right.src = smallMixedPlants[3].filepath;
   }
-  if (vegetable.sunPreference === 'Shade') {
+  if (retrievedGarden[0].gardenType === 'shade') {
     back_left.src = bigShadePlants[0].filepath;
     back_right.src = bigShadePlants[1].filepath;
     front_left.src = smallShadePlants[0].filepath;
@@ -98,11 +107,11 @@ function renderGarden() {
   showGarden(checkLocalStorage());
 }
 
-function Vegetable(name, sunPreference, vegetableSize) {
+function Vegetable(name, sunPreference, vegetableSize, filepath) {
   this.name = name;
   this.sunPreference = sunPreference;
   this.vegetableSize = vegetableSize;
-  this.filepath = `img/${name}.jpg`;
+  this.filepath = filepath;
   allVegetables.push(this);
   if (this.vegetableSize === 'Big' && this.sunPreference === 'Sun') {
     bigSunPlants.push(this);
@@ -127,7 +136,7 @@ function Vegetable(name, sunPreference, vegetableSize) {
 
 
 for (var i = 0; i < allPlants.length; i++) {
-  new Vegetable(allPlants[i][0], allPlants[i][1], allPlants[i][2]);
+  new Vegetable(allPlants[i][0], allPlants[i][1], allPlants[i][2], allPlants[i][3]);
 }
 
 for (var j = 0; j < allVegetables.length; j++) {
