@@ -59,7 +59,7 @@ main p {
 
 .raised-garden {
     border: 20px inset #d2a679;
-    width: 850px;
+    width: 900px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -200,7 +200,7 @@ footer div {
 .container_large {
     height: 100%;
     display: grid;
-    grid-gap: 1px;
+    /* grid-gap: 1px; */
     grid-template: repeat(1, 200px) / repeat(2, 2fr);
     color: black;
 }
@@ -208,7 +208,7 @@ footer div {
 .container_small {
     height: 100%;
     display: grid;
-    grid-gap: 1px;
+    /* grid-gap: 1px; */
     grid-template: repeat(1, 200px) / repeat(4, 1fr);
     color: black;
 }
