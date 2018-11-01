@@ -203,5 +203,9 @@ footer div {
     color: black;
 }
 
+#hero {
+    background-image: url("img/shiplap-bg.png");
+}
+
 
 
