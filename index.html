@@ -24,9 +24,10 @@
         <h2>Food equity for the Northwest</h2>
       </div>
       
-      <p>What Cultivate is:</p>
-      <p>We are a web app designed to make envisioning your garden simple; while educating the Northwest about gardening resources. </p> 
-      <p>To get started, we'll ask you about where you'd place your garden, your food preference from our choices, as well as your gardening experience.  Afterward, we will help guide you toward your next steps in taking control of your food needs.  </p>
+      
+      <p class="index-text">Envision Your Garden. </p>
+      <p class="index-text">Grow Your Food Equity. </p>
+      <p class="index-text">Northwest Garden Resources. </p>
 
 
 
@@ -35,51 +36,50 @@
       <form id="survey">  
         <fieldset>
           <legend>Please fill out the form below:</legend>
-          
-          <label>What is your name?:</label>
+          <label>What is your name?</label>
           <input type="text" id="name" name="user_name" />
-          
+        </fieldset>
           <!-- id to allow for multiple radio clicks -->
-          <fieldset id="gardenSelection">   
-            <legend>Choose your garden type:</legend>
-            <label>Sun</label>
-            <input type="radio" id="sun" name="gardenSelection" value="sun" />
+        <fieldset id="gardenSelection">   
+          <legend>What kind of sunlight will your raised garden get?</legend>
+          <label>Sun</label>
+          <input type="radio" id="sun" name="gardenSelection" value="sun" />
 
-            <label>Shade</label>
-            <input type="radio" id="shade" name="gardenSelection" value="shade" />
+          <label>Shade</label>
+          <input type="radio" id="shade" name="gardenSelection" value="shade" />
 
-            <label>Mixed</label>
-            <input type="radio" id="mixed" name="gardenSelection" value="mixed" />  
+          <label>Mixed</label>
+          <input type="radio" id="mixed" name="gardenSelection" value="mixed" />  
+        </fieldset>
+
+        <fieldset id="lunch">      
+            <legend>Choose your favorite:</legend>
+            <label>Sandwich</label>
+            <input type="radio" id="name" name="lunch" value="sandwich" />
+
+            <label>Pasta</label>
+            <input type="radio" id="name" name="lunch" value="pasta" />
+
+            <label>Salad</label>
+            <input type="radio" id="name" name="lunch" value="salad" /> 
+            
+            <label>Soup</label>
+            <input type="radio" id="name" name="lunch" value="soup" />  
           </fieldset>
 
-          <fieldset id="lunch">      
-              <legend>Choose your favorite:</legend>
-              <label>Sandwich</label>
-              <input type="radio" id="name" name="lunch" value="sandwich" />
+          <fieldset id="experience">
+              <legend>Gardening Experience Level:</legend>
+              <label>Beginner</label>
+              <input type="radio" id="name" name="experience" value="beginner" />
   
-              <label>Pasta</label>
-              <input type="radio" id="name" name="lunch" value="pasta" />
+              <label>Intermediate</label>
+              <input type="radio" id="name" name="experience" value="intermediate" />
   
-              <label>Salad</label>
-              <input type="radio" id="name" name="lunch" value="salad" /> 
-              
-              <label>Soup</label>
-              <input type="radio" id="name" name="lunch" value="soup" />  
-            </fieldset>
+              <label>Master</label>
+              <input type="radio" id="name" name="experience" value="master" />  
+          </fieldset>
 
-            <fieldset id="experience">
-                <legend>Experience Level</legend>
-                <label>Beginner</label>
-                <input type="radio" id="name" name="experience" value="beginner" />
-    
-                <label>Intermediate</label>
-                <input type="radio" id="name" name="experience" value="intermediate" />
-    
-                <label>Master</label>
-                <input type="radio" id="name" name="experience" value="master" />  
-            </fieldset>
-
-            <button type="submit" form="survey" value="Submit" onclick="document.location.href='results.html';">Let's Get Growing!</button>
+          <button type="submit" form="survey" value="Submit" onclick="document.location.href='results.html';">Let's Get Growing!</button>
       </form>
       
     </main>
