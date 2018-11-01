@@ -38,7 +38,7 @@ header {
     font-family: 'Lato', sans-serif;
 }
 
-a {
+header a {
     text-decoration: none;
 }
 header div:not(:first-child) {
@@ -167,6 +167,10 @@ footer div {
     -moz-animation:    seedling 3s; /* Fx 5+ */
     -o-animation:      seedling 3s; /* Opera 12+ */
     animation:         seedling 3s; /* IE 10+, Fx 29+ */
+}
+
+.seed {
+    color: #7FB174;
 }
 
 .about-photo {
