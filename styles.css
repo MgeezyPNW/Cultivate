@@ -17,22 +17,21 @@ h2 {
 }
 
 html  {
-  background-color: #ffffff;
+  background-color: #f8f6f0;
   margin: 10px;
   position: relative;
   min-height: 100%;
 }
 
 body {
-  background-color: #ffffff;
-  margin: 10px;
+  /* background-color: #ffffff; */
+  margin: auto;
   margin-bottom: 60px;
   width: 960px;
 }
 
 /* Header */
 header {
-    /* grid-column: 1 / -1; */
     display: flex;
     height: 50px;
     width: 960px;
@@ -49,20 +48,33 @@ header div:not(:first-child) {
 /* Body */
 main {
     grid-column: 1 / -1;
+    text-align: center;
+}
+
+main p {
+    display: inline;
+    margin-left: 15px;
+    padding-top: 20px;
 }
 
 .raised-garden {
     border: 20px inset #d2a679;
-    width: 900px;
+    width: 850px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .results-text {
     float: left;
     margin-right: 20px;
     padding-top: 20px;
 }
-main p {
+.index-text {
     padding-top: 20px;
+    font-size: 20px;
+    /* font-weight: bold; */
 }
+
+
 
 /* Footer */
 footer {
@@ -159,9 +171,7 @@ footer div {
 
 .about-photo {
     border: none;
-    border-radius: 50%;
-    width: 350px;
-    height: 400px;
+    width: 300px;
 }
 
 .footer-icon {
@@ -205,7 +215,29 @@ footer div {
 
 #hero {
     background-image: url("img/shiplap-bg.png");
+    margin-bottom: 50px;
 }
 
+form {
+    margin-top: 20px;
+    border: 20px inset #d2a679;
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
 
+fieldset {
+    padding: 20px;
+}
+fieldset input {
+    margin-right: 20px;
+}
+
+legend {
+    padding-top: 20px;
+}
+
+button {
+    margin-bottom: 20px;
+}
 
