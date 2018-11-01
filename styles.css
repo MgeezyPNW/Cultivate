@@ -132,7 +132,7 @@ footer div {
     animation:         seedling 3s; /* IE 10+, Fx 29+ */
 }
 
-img {
+.about-photo {
     border: none;
     border-radius: 50%;
     width: 350px;
