@@ -27,6 +27,7 @@ body {
   background-color: #ffffff;
   margin: 10px;
   margin-bottom: 60px;
+  width: 960px;
 }
 
 /* Header */
@@ -48,6 +49,19 @@ header div:not(:first-child) {
 /* Body */
 main {
     grid-column: 1 / -1;
+}
+
+.raised-garden {
+    border: 20px inset #d2a679;
+    width: 900px;
+}
+.results-text {
+    float: left;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+main p {
+    padding-top: 20px;
 }
 
 /* Footer */
