@@ -16,6 +16,10 @@ ASSET ATTRIBUTION
 
 Most of our assets are from getdrawings.com
 
+Wood Grain
+http://getdrawings.com/wood-grain-vector#wood-grain-vector-20.jpg
+<a href="http://getdrawings.com/wood-grain-vector">Wood Grain Vector</a>
+
 Tomato
 http://getdrawings.com/tomato-vector#tomato-vector-28.png
 <a href="http://getdrawings.com/tomato-vector">Tomato Vector</a>
