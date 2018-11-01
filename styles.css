@@ -131,16 +131,13 @@ footer div {
     -o-animation:      seedling 3s; /* Opera 12+ */
     animation:         seedling 3s; /* IE 10+, Fx 29+ */
 }
-    /* transition-property: color;
-    transition-duration: 1s;
-    transition-timing-function: linear; */
-    /* transform: scale(2.0); */
-}
 
-/* .seed-icon:hover {
-    color: #072A24;
-    transform: scale(1.2);
-} */
+img {
+    border: none;
+    border-radius: 50%;
+    width: 350px;
+    height: 400px;
+}
 
 .footer-icon {
     color: #9BCFB8;
