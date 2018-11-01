@@ -79,8 +79,64 @@ footer div {
     color: #9BCFB8;
 }
 
+@-webkit-keyframes seedling {
+    0%   { 
+        opacity: 0;
+        /* transform: rotate(20deg);  */
+    }
+        
+    100% { 
+        opacity: 1;
+        transform: rotate(360deg); 
+    }
+  }
+  @-moz-keyframes seedling {
+    0%   { 
+        opacity: 0;
+        /* transform: rotate(20deg);  */
+    }
+        
+    100% { 
+        opacity: 1;
+        transform: rotate(360deg); 
+    }
+  }
+  @-o-keyframes seedling {
+    0%   { 
+        opacity: 0;
+        /* transform: rotate(20deg);  */
+    }
+        
+    100% { 
+        opacity: 1;
+        transform: rotate(360deg); 
+    }
+  }
+  @keyframes seedling {
+    0%   { 
+        opacity: 0;
+        /* transform: rotate(20deg);  */
+    }
+        
+    100% { 
+        opacity: 1;
+        transform: rotate(360deg); 
+    }
+  }
+
 .seed-icon {
     color: #7FB174;
+    -webkit-animation: seedling 3s; /* Safari 4+ */
+    -moz-animation:    seedling 3s; /* Fx 5+ */
+    -o-animation:      seedling 3s; /* Opera 12+ */
+    animation:         seedling 3s; /* IE 10+, Fx 29+ */
+}
+
+img {
+    border: none;
+    border-radius: 50%;
+    width: 350px;
+    height: 400px;
 }
 
 .footer-icon {
