@@ -12,10 +12,8 @@ var smallShadePlants = [];
 var retrievedGarden = [];
 
 //Access DOM
-// var largeContainer = document.getElementById('container_large');
 var backLeft = document.getElementById('back_left');
 var backRight = document.getElementById('back_right');
-// var smallContainer = document.getElementById('container_small');
 var frontLeft = document.getElementById('front_left');
 var frontLeftCenter = document.getElementById('front_left_center');
 var frontRightCenter = document.getElementById('front_right_center');
@@ -23,14 +21,11 @@ var frontRight = document.getElementById('front_right');
 var vegetableList = document.getElementById('list');
 
 function checkLocalStorage() {
-  //local storage doesn't get run thru constructor.  
-  //instead it is sent to retrieved garden array and useful info accessed as neeeded
   retrievedGarden = JSON.parse(localStorage.getItem('garden'));
 }
 
 
 function showGarden() {
-  // console.log(vegetable);
   if (retrievedGarden[0].gardenType === 'sun') {
     backLeft.src = bigSunPlants[0].filepath;
     backLeft.alt = bigSunPlants[0].name;
@@ -94,7 +89,6 @@ function showGarden() {
 }
 
 function recommendLunch(){
-  // console.log(vegetable);
   if (retrievedGarden[0].gardenType === 'sun' && retrievedGarden[0].lunchPreference === 'sandwich') {
     var itemOne = document.getElementById('item-one');
     itemOne.textContent += `${bigSunPlants[0].name}`;
@@ -238,9 +232,6 @@ function renderShade(){
 function renderUserH1Tag(){
   var userH1 = document.getElementById('user-h1');
   userH1.textContent += `${retrievedGarden[0].name.toUpperCase()}'S GARDEN `;
-  // another way to append above.  
-  // 'user-h1' is the ID of an empty <span> inside <h1>, just added it to the (nonexisting) content w +=
-  //by placing in span the <i> still works properly
 }
 //render user info in garden explanation
 function renderUserName(){
@@ -273,17 +264,25 @@ function renderVeggieList(){
 }
 
 function experienceLink(){
+  console.log('IN FUNCTION');
+  
   if (retrievedGarden[0].experienceLevel === 'beginner') {
+    console.log('beg');
+
     //var a = document.getElementById('yourlinkId'); //or grab it by tagname etc
     // a.href = "somelink url"  --from stack overflow
     var expLink = document.getElementById('experience-link');
     expLink.href = 'resources.html#beginner';
   }
   if (retrievedGarden[0].experienceLevel === 'intermediate') {
+    console.log('int');
+
     expLink = document.getElementById('experience-link');
     expLink.href = 'resources.html#intermediate';
   }
   if (retrievedGarden[0].experienceLevel === 'master') {
+    console.log('master');
+    
     expLink = document.getElementById('experience-link');
     expLink.href = 'resources.html#master';
   }
@@ -320,14 +319,7 @@ function Vegetable(name, sunPreference, vegetableSize, filepath) {
 
 for (var i = 0; i < allPlants.length; i++) {
   new Vegetable(allPlants[i][0], allPlants[i][1], allPlants[i][2], allPlants[i][3]);
-}
-
-// for (var j = 0; j < allVegetables.length; j++) {
-//   var liEl = document.createElement('li');
-//   liEl.textContent = allVegetables[j].name;
-//   vegetableList.appendChild(liEl);
-// }
-
+} 
 
 renderGarden();
 renderUserH1Tag();
