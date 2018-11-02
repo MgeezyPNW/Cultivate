@@ -272,6 +272,23 @@ function renderVeggieList(){
   }
 }
 
+function experienceLink(){
+  if (retrievedGarden[0].experienceLevel === 'beginner') {
+    //var a = document.getElementById('yourlinkId'); //or grab it by tagname etc
+    // a.href = "somelink url"  --from stack overflow
+    var expLink = document.getElementById('experience-link');
+    expLink.href = 'resources.html#beginner';
+  }
+  if (retrievedGarden[0].experienceLevel === 'intermediate') {
+    expLink = document.getElementById('experience-link');
+    expLink.href = 'resources.html#intermediate';
+  }
+  if (retrievedGarden[0].experienceLevel === 'master') {
+    expLink = document.getElementById('experience-link');
+    expLink.href = 'resources.html#master';
+  }
+}
+
 
 function Vegetable(name, sunPreference, vegetableSize, filepath) {
   this.name = name;
@@ -318,6 +335,7 @@ renderUserName();
 renderLunch();
 recommendLunch();
 renderVeggieList();
+experienceLink();
 
 
 
