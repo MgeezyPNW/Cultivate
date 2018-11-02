@@ -16,6 +16,10 @@ ASSET ATTRIBUTION
 
 Most of our assets are from getdrawings.com
 
+Dirt Texture for Garden Background
+http://getdrawings.com/dirt-texture-vector#dirt-texture-vector-25.jpg
+<a href="http://getdrawings.com/dirt-texture-vector">Dirt Texture Vector</a>
+
 Wood Grain
 http://getdrawings.com/wood-grain-vector#wood-grain-vector-20.jpg
 <a href="http://getdrawings.com/wood-grain-vector">Wood Grain Vector</a>

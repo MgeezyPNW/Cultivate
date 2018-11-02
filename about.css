@@ -1,0 +1,13 @@
+main h1 {
+  margin-bottom: 20px;
+}
+
+main p {
+  float: right;
+  margin-bottom: 20px;
+}
+
+main img {
+  box-shadow: 0px 0px 3px 0px;
+  float: left;
+}
