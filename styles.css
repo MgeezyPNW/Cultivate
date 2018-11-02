@@ -54,7 +54,7 @@ main {
 main p {
     display: inline;
     margin-left: 15px;
-    padding-top: 20px;
+    padding-top: 20px; /*disables part of link in rss.html#intermediate*/
 }
 
 .raised-garden {
@@ -81,11 +81,12 @@ footer {
     /* grid-column: 1 / -1; */
     display: flex;
     background-color: #072A24;
-    position: fixed;
-    left: -10px;
+    /* position: fixed; */
+    /* left: -10px; */
     position: absolute;
     bottom: 0;
-    width: 140%;
+    width: 960px;
+    margin: 0px auto;
     height: 65px;
     align-items: center;
     margin-bottom: -100px;
@@ -107,12 +108,12 @@ footer p {
     color: #9BCFB8;
     justify-content: center;
     display: inline;
-    margin-left: 20px;
+    /* margin-left: 0px; */
     font-family: 'Lato', sans-serif;
 }
 
 footer div {
-    margin-left: 25px;
+    margin-left: 75px;
     color: #9BCFB8;
 }
 
@@ -227,7 +228,7 @@ form {
     border: 20px inset #d2a679;
     width: 600px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 fieldset {
