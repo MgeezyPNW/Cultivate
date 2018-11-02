@@ -43,8 +43,8 @@ function showGarden() {
     frontRightCenter.alt = smallSunPlants[2].name;
     frontRightCenter.title = smallSunPlants[2].name;
     frontRight.src = smallSunPlants[3].filepath;
-    frontRight.alt = smallSunPlants[3].filepath;
-    frontRight.title = smallSunPlants[3].filepath;
+    frontRight.alt = smallSunPlants[3].name;
+    frontRight.title = smallSunPlants[3].name;
   }
   if (retrievedGarden[0].gardenType === 'mixed') {
     backLeft.src = bigMixedPlants[0].filepath;
@@ -277,6 +277,7 @@ function experienceLink(){
   if (retrievedGarden[0].experienceLevel === 'intermediate') {
     console.log('int');
 
+ 
     expLink = document.getElementById('experience-link');
     expLink.href = 'resources.html#intermediate';
   }
