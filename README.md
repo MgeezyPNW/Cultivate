@@ -4,11 +4,34 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 PRODUCT DESCRIPTION
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+Culivate: a garden app matching user gardens with specific vegetable types.  Based on amount of sun their garden receives, user food preference, and  gardening experience level.
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 WHO WORKED WITH WHO, AND WHERE:
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+10/29/18 AM- Adam, navigator and Michael, driver, pair to create the basic HTML structure, make initial commits and add content of index.html page.
+
+10/29/18 AM- Heather, navigator and Ryan, driver, pair to add content to the resources.html, results.html, and about.html and to write psuedo code for app.js and vegetable.js pages.
+
+10/29/18 PM- Heather, navigator and Michael, driver, pair to add all plants to vegetables.js.  Plants run thru vegetable constructor and rendered as list on results.html.
+
+10/29/18 PM- Adam, driver and Ryan, navigator, pair to add event listener to form. collect user input, run thru garden custructore to create a user instance, and commit to local storage.
+
+10/30/18- Adam, navigator and Heather, driver, pair to create CSS grids.  They retreive local storage, put all vegetables into sun preference arrays, and render images into garden box on results.html page.
+
+10/30/18- Michael, navigator and Ryan, driver, pair to find suitable images to edit for site assets.
+
+10/31/18- Adam works on about me then joins as navigtor to Heather, driver who has been working on header, footer, and site icons
+
+10/31/18- Michael, navigator and Ryan, driver, pair to add image filepaths to all plants array, vegetable constructor, and image render function.  vegeatble.js bugs detected onces filepathsadded, bugs found and fixed to render images to garden box. 
+
+11/1/18 AM- Adam, navigator and Heather, driver, pair to fix sticky footer
+
+11/1/18 AM- Michaerl, navigator and Ryan, driver pair to begin overall site CSS.  Resources.html and Some results.html finished.
+
+11/1/18 PM- MOB code CSS and most everything fiinished
+
+11/2/18 AM- MOB debug of entire product, only  a few concerns needed addressing
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ASSET ATTRIBUTION
